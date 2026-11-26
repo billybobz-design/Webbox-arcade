@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad042d9ad6be49dcb8a6935730f66a24, type: 3}
+  m_Name: RooftopBoxer
+  m_EditorClassIdentifier: Assembly-CSharp::Webbox.Training.FighterSpritePack
+  idleFrames:
+  - {fileID: 21300000, guid: 31241cc4b20d64f7ea7ec846a221f594, type: 3}
+  - {fileID: 21300000, guid: 242e1ced478f04cd3bf5f8810da685ff, type: 3}
+  walkFrames:
+  - {fileID: 21300000, guid: 322b4966530134372baa14703109566d, type: 3}
+  - {fileID: 21300000, guid: d03e02e131d554c668147edafa6c589a, type: 3}
+  - {fileID: 21300000, guid: 0b8a17d9470ba47999d6f38de64300f5, type: 3}
+  - {fileID: 21300000, guid: c8a489b9ff32e4004a22fe8160881c2b, type: 3}
+  windupFrames:
+  - {fileID: 21300000, guid: e4f8661610b7d4056a26612f8bb535d8, type: 3}
+  - {fileID: 21300000, guid: c342d21784b214a37a479eee6e63a75c, type: 3}
+  activeFrames:
+  - {fileID: 21300000, guid: 239146d89ef2442eda685fcfeee66a28, type: 3}
+  - {fileID: 21300000, guid: f99994103cdc84b5e86014c135bd64b4, type: 3}
+  recoveryFrames:
+  - {fileID: 21300000, guid: dc67c73b3793f4718b02a559e90db52b, type: 3}
+  - {fileID: 21300000, guid: 5ed8f15fadc0641859eedc2e0b5b4bb3, type: 3}
+  guardFrames:
+  - {fileID: 21300000, guid: 92e690e631c349a0a4b797af68dca505, type: 3}
+  - {fileID: 21300000, guid: fa7baab54f734a6ab0b60eef9bb5722d, type: 3}
+  crouchFrames:
+  - {fileID: 21300000, guid: df45a3dd1aec4bb3988cb6ec042c6dd8, type: 3}
+  - {fileID: 21300000, guid: 56ba3b18e36d449eb6967d60a9013756, type: 3}
+  jumpFrames:
+  - {fileID: 21300000, guid: b39b30d7e07c42e2bbbccccb5e438eea, type: 3}
+  - {fileID: 21300000, guid: 062338cfe6d9445fb6280aa902c8da8b, type: 3}
+  - {fileID: 21300000, guid: d606df7ba5ce402e9d0ba92bc231d428, type: 3}
+  landFrames:
+  - {fileID: 21300000, guid: 58028440e7ad49c9bceee74701ce1c88, type: 3}
+  - {fileID: 21300000, guid: 1ea11c1fb2b84e8eba53be40802ba83b, type: 3}
+  hookWindupFrames:
+  - {fileID: 21300000, guid: 606f3e6e9d1646c49f7ae206d63dfc2a, type: 3}
+  - {fileID: 21300000, guid: 53e68bdb3b2048e0973fda6a975acd67, type: 3}
+  hookActiveFrames:
+  - {fileID: 21300000, guid: 2e6dbb4a719f4802b518ec59720cbf99, type: 3}
+  - {fileID: 21300000, guid: d7f7d36914c642f68b007ac4ea5e0fdd, type: 3}
+  hookRecoveryFrames:
+  - {fileID: 21300000, guid: d15a2a5ad9464f53be46af2946cdca8f, type: 3}
+  - {fileID: 21300000, guid: ed393f82186e4e769215ccf41fe9a876, type: 3}
+  heavyWindupFrames:
+  - {fileID: 21300000, guid: ad500514b68b481f9e3bd702e011e6da, type: 3}
+  - {fileID: 21300000, guid: 60a0673cd35144339570ee5d52fe0566, type: 3}
+  heavyActiveFrames:
+  - {fileID: 21300000, guid: f1541520a67446239281c50c21db7a78, type: 3}
+  - {fileID: 21300000, guid: a1ba470c0e064b9ab605ab961980d27d, type: 3}
+  heavyRecoveryFrames:
+  - {fileID: 21300000, guid: fe6d131326c9469295e1064ce2438061, type: 3}
+  - {fileID: 21300000, guid: 9cb053cc793a46d8b9fedcd848935d89, type: 3}
+  - {fileID: 21300000, guid: 472c91a68bd44053a8f1c54db0eaebf7, type: 3}
+  airShadow: {fileID: 21300000, guid: cfc3d732a4f84a41b71d90e54655d6d7, type: 3}
