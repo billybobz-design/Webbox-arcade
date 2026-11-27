@@ -19,6 +19,7 @@ namespace Webbox.Training
 
         public int MaxHealth => maxHealth;
         public int Health { get; private set; }
+        internal Sprite PreviewSprite => artwork.sprite;
         public Rect Hurtbox => new Rect((Vector2)transform.position + hurtOffset - hurtSize / 2f, hurtSize);
 
         private void Awake()

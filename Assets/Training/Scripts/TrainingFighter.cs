@@ -81,6 +81,7 @@ namespace Webbox.Training
         public PunchKind CurrentPunch { get; private set; }
         public Stance CurrentStance { get; private set; }
         public int ComboHits { get; private set; }
+        internal FighterSpritePack SpritePack => spritePack;
         public string LastResult { get; private set; }
         public bool HitPaused => hitStopTime > 0f;
         public bool FollowUpQueued => followUpQueued;
@@ -102,17 +103,24 @@ namespace Webbox.Training
         {
             spawnPosition = transform.position;
             fallbackSprite = artwork.sprite;
-            Sprite shadowSprite = spritePack?.AirShadow;
-            if (shadowSprite != null)
+            SelectSpritePack(spritePack);
+            ResetFighter();
+        }
+
+        internal void SelectSpritePack(FighterSpritePack pack)
+        {
+            spritePack = pack;
+            Sprite shadowSprite = pack != null ? pack.AirShadow : null;
+            if (airShadow == null && shadowSprite != null)
             {
                 airShadow = new GameObject("Air Shadow").AddComponent<SpriteRenderer>();
                 airShadow.transform.SetParent(transform, false);
-                airShadow.sprite = shadowSprite;
                 airShadow.sharedMaterial = artwork.sharedMaterial;
                 airShadow.sortingLayerID = artwork.sortingLayerID;
                 airShadow.sortingOrder = artwork.sortingOrder - 1;
             }
-            ResetFighter();
+            if (airShadow != null)
+                airShadow.sprite = shadowSprite;
         }
 
         public void ResetFighter()
@@ -222,6 +230,8 @@ namespace Webbox.Training
                 PunchKind.Heavy => heavy,
                 _ => new Punch(windupSeconds, activeSeconds, recoverySeconds, damage, lightHitStop, hitOffset, hitSize)
             };
+            if (spritePack != null)
+                punch.offset.y += spritePack.GetHitHeightOffset(kind);
             SetStance(Stance.Idle, 0f);
             poseTime = punchTime = 0f;
             followUpQueued = landed = false;

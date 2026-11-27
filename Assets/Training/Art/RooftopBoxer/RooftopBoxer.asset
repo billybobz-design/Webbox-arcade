@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad042d9ad6be49dcb8a6935730f66a24, type: 3}
   m_Name: RooftopBoxer
   m_EditorClassIdentifier: Assembly-CSharp::Webbox.Training.FighterSpritePack
+  displayName: ROOFTOP BOXER
   idleFrames:
   - {fileID: 21300000, guid: 31241cc4b20d64f7ea7ec846a221f594, type: 3}
   - {fileID: 21300000, guid: 242e1ced478f04cd3bf5f8810da685ff, type: 3}

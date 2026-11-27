@@ -1,10 +1,16 @@
 # Gridline · 单人格斗训练场
 
-默认舞台为港区夜市屋顶，包含原创像素角色、固定训练靶和街机风血条。
+靶场可以选择港区夜市屋顶或校园广场，两张地图都使用原有角色和固定训练靶。
+
+[主菜单背景](Assets/Training/Art/CampusMenuBackdrop.png)用内置 ImageGen 参考校园照片重绘。画面以黄昏中的白色环顶、弧形露台和玻璃立面为主体，左侧留给菜单按钮。
+
+[校园广场](Assets/Training/Art/CampusPlaza.png)用内置 ImageGen 参考主菜单建筑和夜市屋顶的侧视构图绘制，保留环顶和弧形露台，前景是开阔平地。
+
+选角画面提供根据全身照制作的 [Photo Fighter](Assets/Training/Art/PhotoFighter/PhotoFighter.asset) 和原创的 [Rooftop Boxer](Assets/Training/Art/RooftopBoxer/RooftopBoxer.asset)。Photo Fighter 的走路循环有五帧，素材见 [角色原始帧表](ArtSource/PhotoFighter.png) 和 [新增过步帧](ArtSource/PhotoFighter-WalkTransition.png)。
 
 ## 启动
 
-在 Unity Hub 中打开 `Webbox` 工程（Unity **6000.6.5f1**），打开 `Assets/Scenes/SampleScene.unity` 并点击 **Play**。主菜单里点击 **Training Room** 或按 **Enter** 进入训练场。训练中按 **Esc** 返回主菜单。每次进入都会重置拳手位置和靶子血量。如果键盘没有响应，先点击 **Game** 视图。
+在 Unity Hub 中打开 `Webbox` 工程（Unity **6000.6.5f1**），打开 `Assets/Scenes/SampleScene.unity` 并点击 **Play**。主菜单有 **Training Range（靶场）** 和 **Two Players（双人，暂未开放）**。从靶场入口先选地图，再选角色。点击地图卡片或角色头像，也可以用左右方向键 / **A / D** 选择，按 **Enter** 确认。训练中按 **Esc** 可以依次返回选角、选地图和主菜单。每次进入训练都会重置拳手位置和靶子血量。如果键盘没有响应，先点击 **Game** 视图。
 
 | 键位 | 操作 |
 |---|---|

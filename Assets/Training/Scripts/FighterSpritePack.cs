@@ -5,6 +5,10 @@ namespace Webbox.Training
     [CreateAssetMenu(menuName = "Webbox/Fighter Sprite Pack", fileName = "FighterSpritePack")]
     public sealed class FighterSpritePack : ScriptableObject
     {
+        [SerializeField] private string displayName;
+        [SerializeField, Tooltip("Vertical hitbox adjustments in world units. X: light, Y: hook, Z: heavy.")]
+        private Vector3 hitHeightOffsets;
+
         [Header("Stances · face right, pivot at feet")]
         [SerializeField] private Sprite[] idleFrames;
         [SerializeField] private Sprite[] walkFrames;
@@ -31,6 +35,15 @@ namespace Webbox.Training
 
         internal Sprite IdlePose => idleFrames != null && idleFrames.Length > 0 ? idleFrames[0] : null;
         internal Sprite AirShadow => airShadow;
+        internal string DisplayName => string.IsNullOrWhiteSpace(displayName) ? name : displayName;
+
+        internal float GetHitHeightOffset(TrainingFighter.PunchKind kind) => kind switch
+        {
+            TrainingFighter.PunchKind.Light => hitHeightOffsets.x,
+            TrainingFighter.PunchKind.Hook => hitHeightOffsets.y,
+            TrainingFighter.PunchKind.Heavy => hitHeightOffsets.z,
+            _ => 0f
+        };
 
         internal Sprite[] GetStanceFrames(TrainingFighter.Stance stance) => stance switch
         {
